@@ -5,7 +5,7 @@ This project is only for interview.
 Please design a test framework for REST API testing, according to API ref:               
 https://github.com/agilecrm/rest-api (P.S. there are lots of apis, please finish "deals" test at least.)
 
-It is **NOT** the key to implement test cases and make them pass. We are looking forward to your ability on **creating a test framework and coding skill**, including but not limited to following points:
+The key of this exam is to implement test framework and make the "deals" test case pass, **No** need to implement many test cases. We are looking forward to your ability on **creating a test framework and coding skill**, including but not limited to following points:
 * Ease of use and extend
 * Troubleshoot friendly
 * Reusability
