@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<useCase>
+    <name>getDealList</name>
+    <description>Get Deal list.</description>
+    <testCase>
+        <step>Get Deal list.</step>
+        <queryResourceEndPoint>/opportunity</queryResourceEndPoint>
+        <expecteHTTPStatus>201</expecteHTTPStatus>
+        <queryResourceParam>page_size=10</queryResourceParam>
+        <queryOperation>GET</queryOperation>
+        <request>
+        </request>
+        <response></response>
+    </testCase>
+</useCase>

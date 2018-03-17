@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<useCase>
+    <name>getDealById</name>
+    <description>Get Deal by its id.</description>
+    <testCase>
+        <step>Get Deal by its id.</step>
+        <queryResourceEndPoint>/opportunity/4076261507701761</queryResourceEndPoint>
+        <expecteHTTPStatus>201</expecteHTTPStatus>
+        <queryResourceParam>page_size=10</queryResourceParam>
+        <queryOperation>GET</queryOperation>
+        <request>
+        </request>
+        <response></response>
+    </testCase>
+</useCase>

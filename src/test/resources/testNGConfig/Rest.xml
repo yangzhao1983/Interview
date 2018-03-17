@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="REST_API_Tests_Suite" verbose="1">
+    <!-- C9_mode is API -->
+   <!-- <listeners>
+        <listener class-name="com.zuora.test.exam.zy.testproviders.CustomizedListener" />
+    </listeners>-->
+    <test name="REST">
+        <groups>
+            <run>
+                <include name="restAPI" />
+            </run>
+        </groups>
+        <packages>
+            <package name="com.zuora.test.exam.zy.testproviders" />
+        </packages>
+    </test>
+</suite>
