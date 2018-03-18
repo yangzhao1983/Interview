@@ -1,3 +1,17 @@
+/**
+ * run case:
+ *  gradle -i --stacktrace  clean testDeal
+ *
+ * get jars in idea:
+ *  gradle idea
+ *
+ * get jars by gradle
+ *  gradle copyJars
+ *
+ * 
+ */
+
+
 group 'com.zuora.test'
 version '0.0.1-SNAPSHOT'
 
