@@ -1,4 +1,4 @@
-package com.zuora.test.exam.zy.HttpUtils;
+package com.zuora.test.exam.zy.httputils;
 
 import com.google.common.collect.ImmutableMap;
 import com.mashape.unirest.http.HttpResponse;

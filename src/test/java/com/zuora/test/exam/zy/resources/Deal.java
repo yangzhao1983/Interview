@@ -17,13 +17,13 @@ public class Deal {
     private Integer id;
     private String name;
     private String description;
-    private int expected_value;
+    private Integer expected_value;
     private String pipeline_id;
     private String milestone;
-    private int probability;
+    private Integer probability;
     private Long close_date;
     private Long created_time;
-    private int entity_type;
+    private Integer entity_type;
     private Owner owner;
     private Prefs prefs;
     private String pic;
@@ -59,7 +59,7 @@ public class Deal {
         return description;
     }
 
-    public int getExpected_value() {
+    public Integer getExpected_value() {
         return expected_value;
     }
 
@@ -71,7 +71,7 @@ public class Deal {
         return milestone;
     }
 
-    public int getProbability() {
+    public Integer getProbability() {
         return probability;
     }
 
@@ -83,7 +83,7 @@ public class Deal {
         return created_time;
     }
 
-    public int getEntity_type() {
+    public Integer getEntity_type() {
         return entity_type;
     }
 
@@ -104,7 +104,7 @@ public class Deal {
         this.description = description;
     }
 
-    public void setExpected_value(int expected_value) {
+    public void setExpected_value(Integer expected_value) {
         this.expected_value = expected_value;
     }
 
@@ -116,7 +116,7 @@ public class Deal {
         this.milestone = milestone;
     }
 
-    public void setProbability(int probability) {
+    public void setProbability(Integer probability) {
         this.probability = probability;
     }
 
@@ -128,7 +128,7 @@ public class Deal {
         this.created_time = created_time;
     }
 
-    public void setEntity_type(int entity_type) {
+    public void setEntity_type(Integer entity_type) {
         this.entity_type = entity_type;
     }
 

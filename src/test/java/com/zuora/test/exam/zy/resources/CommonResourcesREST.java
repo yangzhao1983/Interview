@@ -1,7 +1,7 @@
 package com.zuora.test.exam.zy.resources;
 
-import com.zuora.test.exam.zy.HttpUtils.HttpAccess;
-import com.zuora.test.exam.zy.HttpUtils.RestResponse;
+import com.zuora.test.exam.zy.httputils.HttpAccess;
+import com.zuora.test.exam.zy.httputils.RestResponse;
 import com.zuora.test.exam.zy.cases.TestCaseREST;
 import com.zuora.test.exam.zy.cases.UseCase;
 
@@ -25,7 +25,7 @@ public class CommonResourcesREST {
 
         if (operation.equalsIgnoreCase("POST")) {
 
-            //TODO: 3.3 dev/api/opportunity
+            //TODO: 3.3 dev/api/opportunity (List) should add new tag <list>true</list> to xml file
             //TODO: 3.5 dev/api/opportunity/email/{email}
             // Solution 1. xml tag <email>
             //TODO: 3.7 dev/api/opportunity/bulk
@@ -84,6 +84,8 @@ public class CommonResourcesREST {
         System.out.println("body is :" + rr.getBody());
 
         // TODO: do assert
+        // 1. verify code.
+        // 2. verify response body by comparing string or by comparing object? use ResourceComparator?
     }
 
     /* ======================================================================
@@ -121,5 +123,7 @@ public class CommonResourcesREST {
         System.out.println("body is :" + rr.getBody());
 
         // TODO: verify
+        // 1. verify code.
+        // 2. verify response body by comparing string or by comparing object? use ResourceComparator?
     }
 }

@@ -4,14 +4,14 @@ package com.zuora.test.exam.zy.resources;
  * Created by kaiser_zhao on 3/17/18.
  */
 public class Owner {
-    private int id;
+    private Integer id;
     private String email;
     private boolean is_admin;
     private boolean is_account_owner;
     private boolean is_disabled;
     private String name;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -35,7 +35,7 @@ public class Owner {
         return name;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

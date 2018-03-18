@@ -1,4 +1,4 @@
-package com.zuora.test.exam.zy.HttpUtils;
+package com.zuora.test.exam.zy.httputils;
 
 /**
  * Created by kaiser_zhao on 3/17/18.

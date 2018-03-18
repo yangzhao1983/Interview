@@ -7,9 +7,9 @@ import java.util.List;
  */
 public class Contact {
 
-    private int id;
+    private Integer id;
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -17,7 +17,7 @@ public class Contact {
         this.type = type;
     }
 
-    public int getId() {
+    public Integer getId() {
 
         return id;
     }
