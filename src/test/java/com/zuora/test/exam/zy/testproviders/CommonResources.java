@@ -75,15 +75,6 @@ public class CommonResources {
             UseCase.UseCaseHeader useCaseHeader = curtestsQueries.getUseCaseHeader();
 
             boolean isListRequest = false;
-            for (TestCaseREST testQuery : listTestsCases) {
-                UseCase.UseCaseHeader testUseCaseHeader = testQuery.getUseCaseHeader();
-
-                String curOperation = testQuery.getOperation();
-                if (curOperation.equalsIgnoreCase("LIST")) {
-                    isListRequest = true;
-                    break;
-                }
-            }
 
             String testNameToadd = null;
             if (useCaseHeader.getTestName() != null) {
@@ -91,8 +82,7 @@ public class CommonResources {
             }
 
             String testDescription = useCaseHeader.getTestDescription();
-                listTests.add(new Object[]{new TestParameters(testNameToadd, testDescription, "NA",
-                        testFile, listTestsCases)});
+            listTests.add(new Object[]{new TestParameters(testNameToadd, testDescription,listTestsCases)});
         }
         System.out.println("addTestToList over " );
         return listTests;

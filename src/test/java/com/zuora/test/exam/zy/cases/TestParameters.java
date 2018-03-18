@@ -10,19 +10,13 @@ public class TestParameters {
 
     private String testName = null;
     private String testDescription = null;
-    private String expectedError = null;
-    private String testFile = null;
     private List<TestCaseREST> testCases = null;
 
     public TestParameters(String name,
                           String description,
-                          String expectedError,
-                          String testFile,
                           List<TestCaseREST> testCases) {
         this.testName = name;
         this.testDescription = description;
-        this.expectedError = expectedError;
-        this.testFile = testFile;
         this.testCases = testCases;
     }
 
@@ -32,14 +26,6 @@ public class TestParameters {
 
     public String getTestDescription() {
         return testDescription;
-    }
-
-    public String getExpectedError() {
-        return expectedError;
-    }
-
-    public String getTestFile() {
-        return testFile;
     }
 
     public List<TestCaseREST> getTestCases() {

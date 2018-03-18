@@ -43,12 +43,9 @@ public class RestResources {
     public void executeResources(TestParameters testParams){
         String testName = testParams.getTestName();
         String testDescription = testParams.getTestDescription();
-        String expectedError = testParams.getExpectedError();
-        String testFile = testParams.getTestFile();
         List<TestCaseREST> testCases = testParams.getTestCases();
 
-        System.out.println("CreateResources: "+ testName + testDescription
-                + expectedError);
+        System.out.println("CreateResources: "+ testName + testDescription);
 
         //TODO: get from properties? SystemProperties?
         String baseUrl = "https://interview.agilecrm.com/dev/api";
