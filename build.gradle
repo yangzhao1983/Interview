@@ -1,0 +1,52 @@
+group 'com.zuora.test'
+version '0.0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+    //maven {
+       // url 'http://artifactory.oraclecorp.com/artifactory/idcs-virtual/'
+    //}
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+    testCompile 'com.mashape.unirest:unirest-java:1.4.9'
+    testCompile 'org.apache.httpcomponents:httpclient:4.4.1'
+    testCompile 'org.apache.httpcomponents:httpmime:4.4'
+    testCompile 'org.apache.httpcomponents:httpcore:4.4'
+    testCompile 'org.springframework:spring-test:3.0.7.RELEASE'
+    testCompile 'org.springframework:spring-context:4.0.8.RELEASE'
+    testCompile 'org.springframework:spring-beans:4.0.8.RELEASE'
+    testCompile 'org.springframework.security:spring-security-core:3.1.2.RELEASE'
+    testCompile 'com.google.code.gson:gson:2.7'
+    testCompile 'com.google.guava:guava:19.0'
+    testCompile 'commons-io:commons-io:2.4'
+    testCompile 'javax.mail:mail:1.4.5'
+    testCompile 'org.dom4j:dom4j:2.0.0'
+    testCompile('org.testng:testng:6.9.4')
+    testCompile('org.codehaus.jackson:jackson-core-asl:1.9.13')
+    testCompile('org.codehaus.jackson:jackson-mapper-asl:1.9.13')
+    testCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+    testCompile 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
+}
+
+task copyJars(type: Copy) {
+    from configurations.runtime
+    into 'lib' // target dir
+}
+
+def testNgConfig = 'src/test/resources/testNGConfig'
+tasks.withType(Test) {
+    useTestNG(){
+    }
+}
+//====================================================================
+// tests launcher
+//====================================================================
+task testDeal(type: Test) {
+    options.suites("${testNgConfig}/Rest.xml")
+}
