@@ -1,0 +1,27 @@
+Readme file by zy about this project and how to run this project.
+
+About how to run the project
+1. This project is developed with gradle/java/testNG.
+2. To run this project:
+	If gradle has been installed, execute: "gradle -i --stacktrace  clean testDeal"
+	If there is no gradle in machine, please execute "./gradlew -i --stacktrace  clean testDeal". ./gradlew is a wrapped execution tool.
+
+Frame work design:
+3. Use xml to represent the cases, under src/test/resources/testData/deal/. Here are two cases for getting all of deals, or by id. 
+4. TestNG config file can be found under src/test/resources/testNGConfig
+
+5. When the gradle task "testDeal" started, RestResource.java will work as
+	Data provider: Be responsible for parsing the xml files, and generating objects(TestParameters.java) as "data".
+	Test: Be responseible for running the data as cases, provided by Data provider.
+6. CommonResources.java are used by RestResources to "provid data" and "run cases".
+7. Xml case are represented by UseCase.java. Each UseCase will contain some steps. Each step(TestCaseREST.java) equal to one rest call. TestParameters contains all of the steps of a UseCase, and also the name/description of the UseCase.
+
+8. Rest requesting will be done by classes in httptils, returning object of RestResponse.java, containing response_code as well as response_body(if any).
+9. CommonResources.java will get the objects of RestResponse.java, and assert the result.
+
+10. For now, I am not quite sure how to assert the response body. Once considering assert it by string, but guess it will be too "strict" (forgive me, I am not familiar with API testing, what we are doing now it only to verify the response_code, as a UI QA ;-<); so I tried to verify by first converting them to java ojects and then comparing the objects. Please see classes under resources. Here I am using JsonCommon.java(based on jackson) to parse json file.
+
+11. For comparing the java objects, I wrote ResourceComparator.java, a class utilizing reflection to compare the objects.
+
+12. For the part of generating/comparing java objects, I have not completed all of the work yet. Since the rest connection was not very stable last weekend... If you think it is required (I mean if you are insterested in this "framework"), I can continue. 
+
